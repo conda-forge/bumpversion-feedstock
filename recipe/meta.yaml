@@ -1,7 +1,6 @@
 {% set name = "bumpversion" %}
-{% set version = "0.5.3" %}
-{% set hash_type = "sha256" %}
-{% set hash = "6744c873dd7aafc24453d8b6a1a0d6d109faf63cd0cd19cb78fd46e74932c77e" %}
+{% set version = "0.6.0" %}
+{% set hash = "4ba55e4080d373f80177b4dabef146c07ce73c7d1377aabf9d3c3ae1f94584a6" %}
 package:
   name: {{ name }}
   version: {{ version }}
@@ -9,14 +8,14 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/b/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   entry_points:
     - bumpversion = bumpversion:main
-  number: 1001
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vvv"
+  script: {{ PYTHON }} -m pip install . -vvv
 
 requirements:
   host:
@@ -40,7 +39,8 @@ test:
 about:
   home: https://github.com/peritus/bumpversion
   license: MIT
-  summary: 'Version-bump your software with a single command!'
+  license_file: LICENSE.rst
+  summary: Version-bump your software with a single command!
   license_family: MIT
 
 extra:

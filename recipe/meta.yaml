@@ -42,10 +42,9 @@ test:
 about:
   home: https://github.com/peritus/bumpversion
   license: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE.rst
   license_family: MIT
-  summary: 'Version-bump your software with a single command!'
-  
+  summary: 'Version-bump your software with a single command!'  
 
 extra:
   recipe-maintainers:

@@ -21,6 +21,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
 
   run:
     - python >={{ python_min }}
@@ -41,8 +42,10 @@ test:
 about:
   home: https://github.com/peritus/bumpversion
   license: MIT
-  summary: 'Version-bump your software with a single command!'
+  license_file: LICENSE.rst
   license_family: MIT
+  summary: 'Version-bump your software with a single command!'
+  
 
 extra:
   recipe-maintainers:
